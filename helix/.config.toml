@@ -1,0 +1,83 @@
+theme = "base16_transparent"
+
+[editor]
+auto-save = true
+auto-format = true
+bufferline = "multiple"
+cursorline = false
+cursorcolumn = false
+completion-replace = true
+true-color = true
+color-modes = true
+popup-border = "all"
+gutters = ["diagnostics", "line-numbers", "spacer", "spacer"]
+
+[editor.whitespace.render]
+space = "none"
+nbsp = "none"
+tab = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+ignore = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "diagnostics",
+  "workspace-diagnostics",
+  "spinner",
+]
+right = [
+  "file-name",
+  "spacer",
+  "position-percentage",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
+
+separator = "╎"
+
+[editor.lsp]
+display-messages = true
+auto-signature-help = true
+display-signature-help-docs = true
+display-inlay-hints = false
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 10
+max-indent-retain = 40
+
+[keys.normal]
+C-s = ":w"
+"tab" = ":bn"
+C-v= "vsplit"
+C-x = ":buffer-close"
+
+[keys.normal.space]
+l =":toggle lsp.display-inlay-hints"
+
+[keys.insert.k]
+j = "normal_mode"
